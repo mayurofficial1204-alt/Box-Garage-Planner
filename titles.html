@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viral Titles - BoxGarage</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h2>📝 Viral Title Generator</h2>
+</header>
+
+<div class="card">
+<h3>Viral Title</h3>
+
+<p id="title">
+From Cardboard to Lamborghini 🤯
+</p>
+
+<button onclick="newTitle()">Generate New Title</button>
+
+<a href="index.html">
+<button>⬅ Back Home</button>
+</a>
+
+</div>
+
+<script>
+const titles = [
+"From Cardboard to Lamborghini 🤯",
+"AI Builds a Bugatti from Boxes!",
+"This Cardboard Ferrari Looks Real 🔥",
+"Can AI Build a Rolls-Royce?",
+"Cardboard McLaren Transformation!"
+];
+
+function newTitle(){
+document.getElementById("title").innerText =
+titles[Math.floor(Math.random()*titles.length)];
+}
+</script>
+
+</body>
+</html>

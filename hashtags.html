@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hashtag Generator - BoxGarage</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h2>#️⃣ Hashtag Generator</h2>
+</header>
+
+<div class="card">
+
+<h3>Trending Hashtags</h3>
+
+<div id="hashtags">
+<p>#BoxGarage</p>
+<p>#CardboardCar</p>
+<p>#DIYCar</p>
+<p>#AICreator</p>
+<p>#Shorts</p>
+</div>
+
+<button onclick="newHashtags()">Generate New Hashtags</button>
+
+<a href="index.html">
+<button>⬅ Back Home</button>
+</a>
+
+</div>
+
+<script>
+const hashtagSets = [
+["#Lamborghini","#Supercar","#Cardboard","#AI","#Shorts"],
+["#Ferrari","#DIY","#LuxuryCars","#BoxGarage","#Reels"],
+["#Bugatti","#AIVideo","#Creator","#CardboardCar","#Trending"],
+["#Tesla","#Future","#ShortVideo","#Viral","#BoxGarage"],
+["#McLaren","#Supercar","#DIYBuild","#AI","#YouTubeShorts"]
+];
+
+function newHashtags(){
+const random = hashtagSets[Math.floor(Math.random()*hashtagSets.length)];
+
+document.getElementById("hashtags").innerHTML =
+random.map(tag => `<p>${tag}</p>`).join("");
+}
+</script>
+
+</body>
+</html>

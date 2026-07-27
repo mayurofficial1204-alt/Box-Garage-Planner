@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoxGarage</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Splash Screen -->
+  <div id="splash">
+    <h1>📦 BoxGarage</h1>
+    <p>Build • Create • Go Viral</p>
+  </div>
+
+  <!-- Login Screen -->
+  <div id="login" style="display:none;">
+    <div class="card">
+      <h2>Welcome</h2>
+
+      <input type="email" id="email" placeholder="Email">
+
+      <input type="password" id="password" placeholder="Password">
+
+      <button onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <!-- Home Screen -->
+  <div id="home" style="display:none;">
+    <header>
+      <h2>📦 BoxGarage</h2>
+    </header>
+
+    <div class="card">
+      <h3>Today's Content</h3>
+      <p>🔥 AI Builds a Cardboard Lamborghini</p>
+    </div>
+
+    <div class="card">
+      <a href="prompts.html">
+      <button>AI Prompt</button>
+      </a> 
+      <a href="titles.html">
+      <button>Titles</button>
+      </a>
+      <a href="hashtags.html">
+      <button>Hashtags</button>
+      </a>
+      <a href="calendar.html">
+      <button>365 Calendar</button>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>  
+

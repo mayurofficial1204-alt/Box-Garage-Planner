@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Prompts - BoxGarage</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h2>🤖 AI Prompt Generator</h2>
+</header>
+
+<div class="card">
+<h3>Today's AI Prompt</h3>
+
+<p id="prompt">
+Create a realistic cardboard Lamborghini Aventador with cinematic lighting, smooth camera movement, ultra-detailed textures, and a dramatic transformation from a simple cardboard box into a luxury supercar.
+</p>
+
+<button onclick="newPrompt()">Generate New Prompt</button>
+<button onclick="copyPrompt()">Copy Prompt</button>
+
+<br><br>
+
+<a href="index.html">
+<button>⬅ Back Home</button>
+</a>
+
+</div>
+
+<script>
+const prompts = [
+"Create a realistic cardboard Ferrari SF90 with glowing LED lights and cinematic camera angles.",
+"Transform a cardboard Bugatti Chiron into a luxury supercar using AI animation.",
+"Build a cardboard Tesla Cybertruck with futuristic lighting and realistic textures.",
+"Create a cardboard McLaren P1 with golden hour lighting and smooth transitions.",
+"Design a cardboard Rolls-Royce Spectre with premium luxury details and dramatic reveal."
+];
+
+function newPrompt(){
+document.getElementById("prompt").innerText =
+prompts[Math.floor(Math.random()*prompts.length)];
+}
+
+function copyPrompt(){
+navigator.clipboard.writeText(
+document.getElementById("prompt").innerText
+);
+alert("Prompt Copied!");
+}
+</script>
+
+</body>
+</html>
